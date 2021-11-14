@@ -28,11 +28,11 @@ library(stringr)
 ```
 ### Raw image
 <div style="text-align: justify">
-Original image is a combination of screenshots of satellite images merged together. The original satellite images can be found on [this website](https://mapa.um.warszawa.pl/mapaApp1/mapa?service=mapa/).</br></br>
+Original image is a combination of screenshots of satellite images merged together. The original satellite images can be found on **[this website](https://mapa.um.warszawa.pl/mapaApp1/mapa?service=mapa)**.</br></br>
 <p align="center">
 <img src="warszawa_sat.jpg" width="500"/>
 </p>
-\
+</br>
 
 ### Image after changes
 In order to deal with irregular shape of the satellite image (blank / white areas that are not the part of the map, but are likely to be considered and clustered as an element of infrastructure), I came up with a workaround. I changed the background color to red so that it will differ from other colors. Then, that color is going to be assigned to the separate cluster and then removed from the analysis.</br>
