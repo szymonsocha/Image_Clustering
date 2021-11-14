@@ -71,8 +71,10 @@ Plot the dataframe - points and its' colors.
 ```r
 plot(y~x, data=rgbImage1, main="Satellite view of Warsaw", col=rgb(rgbImage1[c("r.value", "g.value", "b.value")]), asp=1, pch=".", axes=FALSE, xlab="", ylab="")
 ```
-
-<img src="image_clustering_files/figure-html/unnamed-chunk-4-1.png" width="140%" style="display: block; margin: auto;" />
+<p align="center">
+<img src="plots/sat_view.png" width="500"/>
+</p>
+</br>
 
 ## **Clustering**
 ### CLARA algorithm
@@ -92,8 +94,10 @@ for (i in 1:6) {
 }
 ```
 
-<img src="image_clustering_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
-</br>
+<p align="center">
+<img src="plots/silhouette.png" width="500"/>
+</p>
+</br></br>
 
 <div style="text-align: justify">
 The average silhouette suggests that the optimal number of clusters is 3 or 4 (around 0.72). Such high value of the average silhouette means that clusters will be very consistent. Optimal 3 number of clusters also corresponds with my expectations. I want to have clusters that will group points that are green areas, non green areas and the background.</br>
@@ -105,7 +109,9 @@ Thus, I am proceeding with 3 clusters.
 clara<-clara(rgbImage1[,3:5], 3) 
 ```
 
-<img src="image_clustering_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<p align="center">
+<img src="plots/clara.png" width="500"/>
+</p>
 </br>
 <div style="text-align: justify">
 As you can see on the plot above, the dataset is well clustered. Especially, the first cluster (responsible for the background) with the average silhouette width of 0.99. It is not surprising since the background was plain and easy clusterable.</br>
@@ -138,7 +144,9 @@ Plot clustered image with changed colors.
 plot(rgbImage1$y~rgbImage1$x,col=colors,pch=".",cex=2,asp=1,main="Split into 2 types of urban area",axes=FALSE, xlab="",ylab="")
 ```
 
-<img src="image_clustering_files/figure-html/unnamed-chunk-10-1.png" width="140%" style="display: block; margin: auto;" />
+<p align="center">
+<img src="plots/split.png" width="500"/>
+</p>
 <div style="text-align: justify">
 When we compare our clustered image with the starting image. We can see that the results of clustering are pretty great. Both, green areas and non green areas are defined quite accurately and reflect the reality.
 </div>
@@ -164,7 +172,9 @@ results
 <div style="text-align: justify">
 Based on the above information, I have created a pie chart to visualize the result.
 </div>
-preservef3af034d29d5b7c0
+<p align="center">
+<img src="plots/pie.jpg" width="500"/>
+</p>
 
 <div style="text-align: justify">
 The result shows that over 50% of Warsaw's area are green spaces.</br>
