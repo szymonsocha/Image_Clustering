@@ -1,5 +1,5 @@
 ---
-title: "Image Clustering</br>Calculating the percentage of Warsaw's green space"
+title: "Image Clustering - Calculating the percentage of Warsaw's green space"
 author: "Szymon Socha"
 output: 
   html_document:
