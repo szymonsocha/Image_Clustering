@@ -28,7 +28,7 @@ library(stringr)
 ```
 ### Raw image
 <div style="text-align: justify">
-Original image is a combination of screenshots of satellite images merged together. The original satellite images can be found on **[this website](https://mapa.um.warszawa.pl/mapaApp1/mapa?service=mapa)**.</br></br>
+Original image is a combination of screenshots of satellite images merged together. The original satellite images can be found on <b>[this website](https://mapa.um.warszawa.pl/mapaApp1/mapa?service=mapa)</b>.</br></br>
 <p align="center">
 <img src="warszawa_sat.jpg" width="500"/>
 </p>
@@ -40,7 +40,7 @@ I also boosted contrast a bit to make colors more distinctive.</br></br>
 <p align="center">
 <img src="waw_boost.jpg" width="500"/>
 </p></div>
-\
+</br>
 
 ### Load the image
 <div style="text-align: justify">
@@ -93,7 +93,7 @@ for (i in 1:6) {
 ```
 
 <img src="image_clustering_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
-\
+</br>
 
 <div style="text-align: justify">
 The average silhouette suggests that the optimal number of clusters is 3 or 4 (around 0.72). Such high value of the average silhouette means that clusters will be very consistent. Optimal 3 number of clusters also corresponds with my expectations. I want to have clusters that will group points that are green areas, non green areas and the background.</br>
@@ -106,11 +106,11 @@ clara<-clara(rgbImage1[,3:5], 3)
 ```
 
 <img src="image_clustering_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
-\
+</br>
 <div style="text-align: justify">
 As you can see on the plot above, the dataset is well clustered. Especially, the first cluster (responsible for the background) with the average silhouette width of 0.99. It is not surprising since the background was plain and easy clusterable.</br>
 The average silhouette width of 0.72 gives me the certainty that I can proceed to a further analysis.
-\
+</br>
 
 In the result clustering, I received a simplify satellite image of Warsaw with a limited number of colors to 3. The color of each cluster is the most common color in each group.</b>
 Those colors can be quite unintuitive, let's change them.
@@ -128,7 +128,7 @@ colors <- str_replace_all(colors,"#101300","#4b9c19")
 # Set color for non green areas (#7E7F57 to #1c1c1c)
 colors <- str_replace_all(colors,"#7E7F57","#1c1c1c")
 ```
-\
+</br>
 
 <div style="text-align: justify">
 Plot clustered image with changed colors.
