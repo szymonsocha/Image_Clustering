@@ -28,7 +28,7 @@ library(stringr)
 ```
 ### Raw image
 <div style="text-align: justify">
-Original image is a combination of screenshots of satellite images merged together. The original satellite images can be found on [this website](https://mapa.um.warszawa.pl/mapaApp1/mapa?service=mapa).</br></br>
+Original image is a combination of screenshots of satellite images merged together. The original satellite images can be found on [this website](https://mapa.um.warszawa.pl/mapaApp1/mapa?service=mapa/).</br></br>
 <p align="center">
 <img src="warszawa_sat.jpg" width="500"/>
 </p>
