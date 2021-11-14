@@ -135,7 +135,7 @@ Plot clustered image with changed colors.
 </div>
 
 ```r
-plot(rgbImage1$y~rgbImage1$x, col=colors, pch=".", cex=2, asp=1, main="Split into 2 types of urban area", axes=FALSE, xlab="", ylab="")
+plot(rgbImage1$y~rgbImage1$x,col=colors,pch=".",cex=2,asp=1,main="Split into 2 types of urban area",axes=FALSE, xlab="",ylab="")
 ```
 
 <img src="image_clustering_files/figure-html/unnamed-chunk-10-1.png" width="140%" style="display: block; margin: auto;" />
